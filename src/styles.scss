@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Urbanist";
+  src: url(./assets/fonts/Urbanist-Regular.ttf) format("truetype");
+}
+
+html {
+  font-family: "Urbanist";
+  // background: url("./assets/images/bg.svg"), #01004d;
+  background: #1a1a1a;
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  width: 100vw;
+  color: ghostwhite;
+}
+
+body {
+  margin: 0;
+}

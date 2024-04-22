@@ -1,0 +1,35 @@
+.heading {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    size-adjust: 100%;
+    height: 125px;
+  }
+  text-align: center;
+  // padding-top: 10px;
+}
+
+app-typewriter {
+  color: ghostwhite;
+}
+
+.first-section {
+  height: 100vh;
+  width: 100wh;
+}
+
+.heading {
+  height: auto;
+  width: fit-content;
+  position: relative;
+  align-self: center !important;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-self: center;
+  margin-top: 20vh;
+}
