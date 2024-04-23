@@ -6,7 +6,6 @@
 
 html {
   font-family: "Urbanist";
-  // background: url("./assets/images/bg.svg"), #01004d;
   background: #1a1a1a;
   background-size: 100vw auto;
   background-repeat: no-repeat;
@@ -16,4 +15,13 @@ html {
 
 body {
   margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

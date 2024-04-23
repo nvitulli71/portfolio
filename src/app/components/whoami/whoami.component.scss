@@ -1,9 +1,11 @@
-h1,
-.profile-blurb {
+h1 {
   text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
-.profile-blurb {
-  font-size: 1.8rem;
+h1 .profile-blurb {
+  font-size: 1.2rem;
   line-height: 1.8;
+  align-content: baseline;
 }
