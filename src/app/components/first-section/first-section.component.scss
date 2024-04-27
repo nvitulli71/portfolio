@@ -12,7 +12,7 @@
 }
 
 app-typewriter {
-  color: ghostwhite;
+  color: #e7f6ff;
 }
 
 .first-section {
@@ -33,4 +33,10 @@ app-typewriter {
   flex-direction: column;
   justify-self: center;
   margin-top: 20vh;
+}
+
+#learn-more-button {
+  display: block;
+  margin: auto;
+  width: 130px;
 }
