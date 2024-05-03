@@ -17,6 +17,7 @@ export class FirstSectionComponent {
     'Software Engineer',
     'Full Stack Developer',
     'Tech Enthusiast',
+    'Learner',
     'Leader',
   ];
 }
