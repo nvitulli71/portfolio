@@ -45,4 +45,8 @@ export const skillsConstants: Skills[] = [
     title: 'SASS',
     path: '../../../assets/images/skills/sass.svg',
   },
+  {
+    title: 'Golang',
+    path: '../../../assets/images/skills/go.svg',
+  },
 ];

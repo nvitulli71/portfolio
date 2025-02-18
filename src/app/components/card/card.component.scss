@@ -1,17 +1,43 @@
 .card {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 25vw;
-  max-width: 225px;
+  max-width: 200px;
   min-width: 140px;
-  height: 120px;
+  height: 200px;
   padding: 20px 10px 20px 7px;
   background: #1a1a1a;
   border-radius: 24px;
   color: #e7f6ff;
   border-color: #e7f6ff;
-  border-width: 4px;
-  margin: 5px;
+  border-width: 1px;
+  margin: 8px;
+  background-color: rgba(70, 70, 70, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.card::after {
+  background-color: rgba(217, 217, 217, 0.3);
+  bottom: 49.65%;
+  content: "";
+  filter: blur(8px);
+  left: 0.865%;
+  position: absolute;
+  right: 0.865%;
+  top: 49.65%;
+  transform: rotate(-45deg) skewX(20deg);
+  z-index: -1;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(217, 217, 217, 0.5);
+}
+
+.card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
 }
 
 .card-name {
