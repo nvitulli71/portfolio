@@ -4,13 +4,18 @@ h1 {
 }
 
 .skills {
-  padding-top: 7rem;
-
-  padding-bottom: 8rem;
+  position: relative;
+  height: 100vh;
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
 }
 
 .row {
-  // max-width: 80vw;
   margin-left: auto;
   margin-right: auto;
 }

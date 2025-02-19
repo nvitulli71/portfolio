@@ -4,8 +4,15 @@ h1 {
 }
 
 .contact {
-  padding-top: 7rem;
-  padding-bottom: 6rem;
+  position: relative;
+  height: 50vh;
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
 }
 
 fa-icon {
@@ -13,11 +20,10 @@ fa-icon {
 }
 
 .contact-icon {
-  color: #e7f6ff;
+  color: #55555a;
 }
 
 fa-icon:hover {
   color: #e7f6ff;
-  font-size: 1.2em;
   transition: 0.2s ease-out;
 }

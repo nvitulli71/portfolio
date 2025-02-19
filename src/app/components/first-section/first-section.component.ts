@@ -16,6 +16,7 @@ export class FirstSectionComponent {
   typewriterTitles = [
     'Software Engineer',
     'Full Stack Developer',
+    'Technical Lead',
     'Tech Enthusiast',
     'Learner',
     'Leader',

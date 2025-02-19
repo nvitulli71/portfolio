@@ -3,47 +3,21 @@
   align-items: center;
   justify-content: center;
   width: 25vw;
-  max-width: 200px;
-  min-width: 140px;
-  height: 200px;
-  padding: 20px 10px 20px 7px;
-  background: #1a1a1a;
+  width: 150px;
+  height: 150px;
+  padding: 10px 10px 10px 10px;
   border-radius: 24px;
   color: #e7f6ff;
-  border-color: #e7f6ff;
   border-width: 1px;
-  margin: 8px;
-  background-color: rgba(70, 70, 70, 0.3);
-  backdrop-filter: blur(5px);
-}
-
-.card::after {
-  background-color: rgba(217, 217, 217, 0.3);
-  bottom: 49.65%;
-  content: "";
-  filter: blur(8px);
-  left: 0.865%;
-  position: absolute;
-  right: 0.865%;
-  top: 49.65%;
-  transform: rotate(-45deg) skewX(20deg);
-  z-index: -1;
-}
-
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(217, 217, 217, 0.5);
-}
-
-.card:hover::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .card-name {
+  padding-top: 0.5rem;
   font-size: 1.2rem;
 }
 
 img {
-  filter: invert(1);
+  filter: invert(100%) sepia(27%) saturate(3886%) hue-rotate(177deg)
+    brightness(104%) contrast(105%); // fill: blue;
 }
