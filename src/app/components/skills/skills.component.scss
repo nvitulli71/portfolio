@@ -1,21 +1,28 @@
-h1 {
+h1,
+h4 {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.skills {
+.interpersonal-skills {
+  padding-top: 4rem;
+}
+
+.nv-skills {
+  min-height: 100vh; /* Ensures at least viewport height */
   position: relative;
-  height: 100vh;
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-  }
+  padding-top: 6rem;
 }
 
 .row {
   margin-left: auto;
   margin-right: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+fa-icon {
+  color: #55555a;
 }

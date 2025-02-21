@@ -10,7 +10,8 @@
     "firebase:init": "firebase init",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
+    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
+    "authenticate": "firebase login --reauth"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +32,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.1.0",
     "express": "^4.18.2",
     "ityped": "^1.0.3",
     "ngx-bootstrap": "^12.0.0",
