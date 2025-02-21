@@ -5,5 +5,27 @@
 }
 
 .nav-item {
-  position: static;
+  position: relative;
+  &:hover {
+    &:before {
+      transform: scaleX(1);
+      left: 0;
+      right: 0;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background-color: #e7f6ff;
+  }
+}
+
+.collapse {
+  transition: all 0.3s ease-in-out; /* Adjust the duration and easing function */
 }

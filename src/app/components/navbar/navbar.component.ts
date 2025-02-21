@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +7,19 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+  ngOnInit() {
+    const collapseMenu = document.getElementById('navbarTogglerDemo02');
+    if (collapseMenu) {
+      const dropdownLinks = document.querySelectorAll('.nav-link');
+      dropdownLinks.forEach((link) => {
+        link.addEventListener('click', function () {
+          collapseMenu.classList.remove('show');
+        });
+      });
+    }
+  }
+
   onClickAddActive($event) {
     let clickedElement = $event.target || $event.srcElement;
 

@@ -1,14 +1,42 @@
-<div class="skills" id="skills">
+<div id="skills">
+  <section class="p-3 p-lg-5 d-flex column">
+    <div class="container nv-skills my-auto">
 
-  <div class="container">
-    <h1>skills</h1>
+      <h1>skills</h1>
 
-    <div class="row justify-content-center">
-      @for (skill of skills; track $index) {
-      <div class="col-auto">
-        <app-card title={{skill.title}} path={{skill.path}}></app-card>
+      <div class="technical-skills">
+        <h4>Development</h4>
+
+        <div class="row justify-content-center">
+          @for (skill of skills; track $index) {
+          <div class="col-auto">
+            <app-card title={{skill.title}} path={{skill.path}}></app-card>
+          </div>
+          }
+        </div>
+
       </div>
-      }
+      <div class="interpersonal-skills">
+        <h4>Technical/Interpersonal</h4>
+        <div class="row justify-content-center">
+          @for (column of this.interpersonalSkills; track $index) {
+          <div class="col-md-4 col-md-pull-4">
+            <ul>
+              @for (skill of column; track $index) {
+              <li>
+                <fa-icon [icon]="faTerminal"></fa-icon>
+                &nbsp;
+                {{ skill.title }}
+              </li>
+              }
+            </ul>
+          </div>
+          }
+
+        </div>
+
+      </div>
+
     </div>
-  </div>
+  </section>
 </div>

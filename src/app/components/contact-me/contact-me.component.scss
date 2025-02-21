@@ -3,18 +3,6 @@ h1 {
   margin-bottom: 50px;
 }
 
-.contact {
-  position: relative;
-  height: 50vh;
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-  }
-}
-
 fa-icon {
   padding: 8px;
 }
