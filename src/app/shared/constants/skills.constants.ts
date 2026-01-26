@@ -3,58 +3,58 @@ import { Skills } from '../models/skills.interface';
 export const skillsConstants: Skills[] = [
   {
     title: 'ANGULAR',
-    path: '../../../assets/images/skills/angular.svg',
+    path: 'assets/images/skills/angular.svg',
   },
   {
     title: 'TYPESCRIPT',
-    path: '../../../assets/images/skills/typescript.svg',
+    path: 'assets/images/skills/typescript.svg',
   },
   {
     title: 'JAVASCRIPT',
-    path: '../../../assets/images/skills/javascript.svg',
+    path: 'assets/images/skills/javascript.svg',
   },
   {
     title: 'NODE.JS',
-    path: '../../../assets/images/skills/nodedotjs.svg',
+    path: 'assets/images/skills/nodedotjs.svg',
   },
   {
     title: 'EXPRESS',
-    path: '../../../assets/images/skills/express.svg',
+    path: 'assets/images/skills/express.svg',
   },
   {
     title: 'NESTJS',
-    path: '../../../assets/images/skills/nestjs.svg',
+    path: 'assets/images/skills/nestjs.svg',
   },
   {
     title: 'JEST',
-    path: '../../../assets/images/skills/jest.svg',
+    path: 'assets/images/skills/jest.svg',
   },
   {
     title: 'MYSQL',
-    path: '../../../assets/images/skills/mysql.svg',
+    path: 'assets/images/skills/mysql.svg',
   },
   {
     title: 'POSTGRESQL',
-    path: '../../../assets/images/skills/postgresql.svg',
+    path: 'assets/images/skills/postgresql.svg',
   },
   {
     title: 'CSS',
-    path: '../../../assets/images/skills/css3.svg',
+    path: 'assets/images/skills/css3.svg',
   },
   {
     title: 'SASS',
-    path: '../../../assets/images/skills/sass.svg',
+    path: 'assets/images/skills/sass.svg',
   },
   {
     title: 'GOLANG',
-    path: '../../../assets/images/skills/go.svg',
+    path: 'assets/images/skills/go.svg',
   },
   {
     title: 'GITHUB',
-    path: '../../../assets/images/skills/github.svg',
+    path: 'assets/images/skills/github.svg',
   },
   {
     title: 'GIT',
-    path: '../../../assets/images/skills/git.svg',
+    path: 'assets/images/skills/git.svg',
   },
 ];

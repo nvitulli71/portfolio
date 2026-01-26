@@ -1,17 +1,189 @@
-h1 {
+.nv-heading {
   text-align: center;
-  margin-bottom: 50px;
 }
 
-fa-icon {
-  padding: 8px;
+.nv-contact {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+}
+.terminal-contact {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  transition: box-shadow var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--shadow-2xl);
+  }
+}
+
+form {
+  margin-bottom: var(--space-xl);
+}
+
+.form-group {
+  margin-bottom: var(--space-lg);
+
+  label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--terminal-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    transition: all var(--transition-normal);
+
+    &::placeholder {
+      color: var(--text-muted);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    }
+
+    &.error {
+      border-color: var(--accent-red);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .error-message {
+    color: var(--accent-red);
+    font-size: var(--text-xs);
+    margin-top: var(--space-xs);
+    font-family: var(--font-sans);
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+
+  &:hover:not(:disabled) {
+    background: var(--accent-blue-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.success-message,
+.error-message {
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-sans);
+}
+
+.success-message {
+  background: rgba(72, 187, 120, 0.1);
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+
+  .reset-btn {
+    background: transparent;
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    margin-left: var(--space-sm);
+
+    &:hover {
+      background: var(--accent-green);
+      color: white;
+    }
+  }
+}
+
+.error-message {
+  background: rgba(252, 129, 129, 0.1);
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
 }
 
 .contact-icon {
-  color: #55555a;
+  color: var(--text-secondary);
+  font-size: 2rem;
+  transition: all var(--transition-normal);
+
+  &:hover {
+    color: var(--accent-blue);
+    transform: translateY(-4px);
+  }
 }
 
-fa-icon:hover {
-  color: #e7f6ff;
-  transition: 0.2s ease-out;
+@media (max-width: 768px) {
+  .social-links {
+    gap: var(--space-lg);
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+  }
 }

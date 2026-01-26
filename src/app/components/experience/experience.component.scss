@@ -1,0 +1,84 @@
+.git-log {
+  .commit {
+    border-bottom: 1px solid var(--code-border);
+    padding: 1rem 0;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(74, 144, 226, 0.05);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .commit-hash {
+    color: var(--accent-primary);
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .commit-message {
+    color: var(--terminal-text);
+    display: inline;
+  }
+
+  .commit-action {
+    color: var(--syntax-keyword);
+    font-weight: 500;
+  }
+
+  .commit-repo {
+    color: var(--syntax-string);
+    font-style: italic;
+  }
+
+  .commit-date {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .commit-details {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    border-left: 2px solid var(--accent-primary);
+  }
+
+  .commit-description {
+    color: var(--terminal-text);
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .git-log .commit-details {
+    padding-left: 1rem;
+  }
+
+  .git-log .commit-date {
+    font-size: 0.75rem;
+  }
+}
+
+.nv-heading {
+  text-align: center;
+}
+
+.nv-experience h1 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+}
+
+.nv-experience {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

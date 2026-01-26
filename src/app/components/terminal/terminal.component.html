@@ -1,0 +1,13 @@
+<div class="terminal" [class.centered]="centered()">
+  <div class="terminal-header">
+    <div class="terminal-buttons">
+      <span class="terminal-button close"></span>
+      <span class="terminal-button minimize"></span>
+      <span class="terminal-button maximize"></span>
+    </div>
+    <div class="terminal-title">{{ title() }}.md</div>
+  </div>
+  <div class="terminal-body">
+    <ng-content></ng-content>
+  </div>
+</div>

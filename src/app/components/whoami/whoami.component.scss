@@ -1,9 +1,11 @@
 h1 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: var(--space-xl);
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
 }
 
-h1 .profile-blurb {
+.profile-blurb {
   font-size: 1.2rem;
   line-height: 1.8;
   margin-left: auto;
@@ -11,11 +13,13 @@ h1 .profile-blurb {
 }
 
 .nv-whoami {
-  min-height: 100vh; /* Ensures at least viewport height */
+  min-height: 100vh;
   position: relative;
-  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 fa-icon {
-  color: #55555a;
+  color: var(--accent-blue);
 }
