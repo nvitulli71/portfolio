@@ -14,20 +14,23 @@
       <img src="../../../assets/images/icon1.svg" alt="" width="30" height="24">
       &nbsp;<strong>Nick</strong> Vitulli
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02" aria-expanded="true">
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div [class.show]="isMenuOpen" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#whoami">whoami</a>
+          <a class="nav-link" href="#whoami" (click)="closeMenu()">whoami</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#skills">skills</a>
+          <a class="nav-link" href="#skills" (click)="closeMenu()">skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">contact</a>
+          <a class="nav-link" href="#experience" (click)="closeMenu()">experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" (click)="closeMenu()">contact</a>
         </li>
       </ul>
     </div>

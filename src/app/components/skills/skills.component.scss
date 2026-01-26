@@ -1,28 +1,87 @@
 h1,
 h4 {
   text-align: center;
-  margin-bottom: 50px;
-}
-
-.interpersonal-skills {
-  padding-top: 4rem;
+  margin-bottom: var(--space-xl);
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
 }
 
 .nv-skills {
-  min-height: 100vh; /* Ensures at least viewport height */
+  min-height: 100vh;
   position: relative;
-  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.row {
-  margin-left: auto;
-  margin-right: auto;
+.technical-skills {
+  /* Removed padding to match other sections' height consistency */
 }
 
-ul {
-  list-style: none;
+.interpersonal-skills {
+  /* Removed padding to match other sections' height consistency */
 }
 
-fa-icon {
-  color: #55555a;
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  padding: var(--space-xl);
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--terminal-border);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  cursor: default;
+
+  fa-icon {
+    color: var(--accent-blue);
+    margin-right: var(--space-sm);
+    transition: color var(--transition-normal);
+  }
+
+  .skill-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: var(--space-sm);
+    filter: invert(39%) sepia(93%) saturate(1470%) hue-rotate(195deg) brightness(91%) contrast(89%);
+    transition: all var(--transition-normal);
+  }
+
+  &:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+
+    fa-icon {
+      color: var(--accent-blue-light);
+    }
+
+    .skill-icon {
+      filter: invert(39%) sepia(93%) saturate(1470%) hue-rotate(195deg) brightness(101%)
+        contrast(89%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-badges {
+    padding: var(--space-md);
+  }
+
+  .skill-badge {
+    font-size: var(--text-xs);
+    padding: var(--space-sm) var(--space-md);
+  }
 }

@@ -1,7 +1,6 @@
-<div class="card">
-  <img src={{path()}} style="max-width: 90px;" />
+<div class="card" [title]="title()">
+  <img [src]="path()" alt="{{title()}}" loading="lazy" />
   <div class="card-name">
     {{title()}}
   </div>
-
 </div>

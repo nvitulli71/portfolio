@@ -1,25 +1,384 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Font Face for Urbanist */
 @font-face {
-  font-family: "Urbanist";
-  src: url(./assets/fonts/Urbanist-Regular.ttf) format("truetype");
+  font-family: 'Urbanist';
+  src: url(./assets/fonts/Urbanist-Regular.ttf) format('truetype');
+}
+
+/* Scroll Animations */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.scroll-zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+
+  &.animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+:root {
+  /* Primary Colors */
+  --bg-primary: #0d0d0d;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #242424;
+  --bg-card: #1e1e1e;
+
+  /* Text Colors */
+  --text-primary: #e7f6ff;
+  --text-secondary: #a0aec0;
+  --text-muted: #6b7280;
+
+  /* Accent Colors */
+  --accent-blue: #4a90e2;
+  --accent-blue-light: #63b3ed;
+  --accent-purple: #9f7aea;
+  --accent-purple-light: #b794f6;
+  --accent-green: #48bb78;
+  --accent-green-light: #68d391;
+  --accent-orange: #ed8936;
+  --accent-red: #fc8181;
+
+  /* Terminal Colors */
+  --terminal-bg: #1e1e1e;
+  --terminal-header: #323233;
+  --terminal-border: #404040;
+
+  /* Syntax Highlighting */
+  --syntax-keyword: #c586c0;
+  --syntax-string: #ce9178;
+  --syntax-comment: #6a9955;
+  --syntax-function: #dcdcaa;
+  --syntax-variable: #9cdcfe;
+  --syntax-number: #b5cea8;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  --gradient-secondary: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+  --gradient-dark: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+
+  /* Spacing System */
+  --space-0: 0;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Typography */
+  --font-sans: 'Urbanist', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.7);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.8);
+  --shadow-glow: 0 0 20px rgba(74, 144, 226, 0.3);
+  --shadow-glow-purple: 0 0 20px rgba(159, 122, 234, 0.3);
+
+  /* Transitions */
+  --transition-instant: 50ms;
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  --transition-slower: 700ms;
+  --easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-in: cubic-bezier(0.4, 0, 1, 1);
+  --easing-out: cubic-bezier(0, 0, 0.2, 1);
+  --easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Z-Index Scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: "Urbanist";
-  background: #1a1a1a;
-  background-size: 100vw auto;
-  background-repeat: no-repeat;
-  width: 100vw;
-  color: #e7f6ff;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: var(--leading-normal);
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
   position: relative;
+  background: var(--gradient-dark);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 html,
 body {
   height: 100%;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+}
+
+h2 {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+}
+
+h3 {
+  font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+}
+
+h4 {
+  font-size: clamp(var(--text-lg), 2.5vw, var(--text-2xl));
+}
+
+p {
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color var(--transition-normal) var(--easing-default);
+
+  &:hover {
+    color: var(--accent-blue-light);
+  }
+}
+
+/* Section Spacing */
+.section-spacing {
+  padding: clamp(var(--space-2xl), 8vw, var(--space-4xl)) 0;
+}
+
+/* Container */
+.container-fluid {
+  width: 100%;
+  padding-right: var(--space-md);
+  padding-left: var(--space-md);
+}
+
+/* Interactive Elements */
+button,
+a,
+.card,
+.nav-link,
+.btn,
+[role='button'] {
+  transition: all var(--transition-normal) var(--easing-default);
+  cursor: pointer;
+}
+
+/* Focus States */
+button:focus-visible,
+a:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Glow Effect on Hover */
+.glow-on-hover {
+  transition: all var(--transition-normal) var(--easing-default);
+}
+
+.glow-on-hover:hover {
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Scroll Animation Base */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all var(--transition-slow) var(--easing-default);
+}
+
+.fade-in.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-blue);
+  color: var(--text-primary);
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Skip to Content (Accessibility) */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-blue);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  z-index: 9999;
+  transition: top var(--transition-fast) var(--easing-default);
+
+  &:focus {
+    top: 0;
+  }
 }

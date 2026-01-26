@@ -1,36 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent implements OnInit {
-  ngOnInit() {
-    const collapseMenu = document.getElementById('navbarTogglerDemo02');
-    if (collapseMenu) {
-      const dropdownLinks = document.querySelectorAll('.nav-link');
-      dropdownLinks.forEach((link) => {
-        link.addEventListener('click', function () {
-          collapseMenu.classList.remove('show');
-        });
-      });
-    }
+export class NavbarComponent {
+  isMenuOpen = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
-  onClickAddActive($event) {
-    let clickedElement = $event.target || $event.srcElement;
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 
-    let isCertainButtonAlreadyActive =
-      clickedElement.parentElement.querySelector('.active');
-    // if a Button already has Class: .active
+  onClickAddActive($event: Event): void {
+    let clickedElement = $event.target as HTMLElement;
+
+    let isCertainButtonAlreadyActive = clickedElement.parentElement?.querySelector('.active');
+    
     if (isCertainButtonAlreadyActive) {
-      clickedElement.parentElement.previousSibling.classList.remove('active');
+      clickedElement.parentElement?.previousElementSibling?.classList.remove('active');
       isCertainButtonAlreadyActive.classList.remove('active');
     }
 
-    clickedElement.className += ' active';
+    clickedElement.classList.add('active');
   }
 }

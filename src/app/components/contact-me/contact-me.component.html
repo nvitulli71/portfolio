@@ -1,21 +1,27 @@
 <section class="p-3 p-lg-5 d-flex flex-column" id="contact">
   <div class="container nv-contact my-auto">
-
-    <h1>contact</h1>
+    <h1 class="nv-heading">contact</h1>
 
     <div class="row justify-content-center">
-      <div class="col-auto">
-        <a class="contact-icon" href="https://github.com/nvitulli71" target="_blank">
-          <fa-icon [icon]="faGithub" size="2x"></fa-icon>
-        </a>
-        <a class="contact-icon" href="https://www.linkedin.com/in/nick-vitulli/" target="_blank">
-          <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
-        </a>
-        <a class="contact-icon" href="mailto:nick@nickvitulli.dev">
-          <fa-icon [icon]="faEnvelop" size="2x"></fa-icon>
-        </a>
+      <div class="col-lg-8">
+        <app-terminal title="contact">
 
 
+          <div class="social-links">
+            <a class="contact-icon" href="https://github.com/nvitulli71" target="_blank">
+              <fa-icon [icon]="faGithub" size="1x"></fa-icon>
+            </a>
+            <a class="contact-icon" href="https://www.linkedin.com/in/nick-vitulli/" target="_blank">
+              <fa-icon [icon]="faLinkedin" size="1x"></fa-icon>
+            </a>
+            <a class="contact-icon" href="https://medium.com/@nickvitulli" target="_blank">
+              <fa-icon [icon]="faMedium" size="1x"></fa-icon>
+            </a>
+            <a class="contact-icon" href="mailto:nick@nickvitulli.dev">
+              <fa-icon [icon]="faEnvelope" size="1x"></fa-icon>
+            </a>
+          </div>
+        </app-terminal>
       </div>
     </div>
   </div>

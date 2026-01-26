@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { CardComponent } from '../card/card.component';
-import { SkillsComponent } from '../skills/skills.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { StatsComponent } from '../stats/stats.component';
 
 @Component({
   selector: 'app-whoami',
   standalone: true,
-  imports: [CardComponent, SkillsComponent, FontAwesomeModule],
+  imports: [FontAwesomeModule, StatsComponent],
   templateUrl: './whoami.component.html',
   styleUrl: './whoami.component.scss',
 })
